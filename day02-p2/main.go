@@ -25,6 +25,7 @@ func main() {
 
 	for i := range words {
 		for j := range words[i+1:] {
+			j += i + 1
 			common, ok := compare(words[i], words[j])
 			if ok {
 				fmt.Println(common)
